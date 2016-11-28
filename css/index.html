@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html lang='cn'>
+	<head>
+		<meta name="description" content="">
+		<meta charset="utf-8">
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+    	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    	<!-- rem js based on clientWidth-->
+		<script async type="text/javascript">
+			(function(doc, win) {
+    			var docEl = doc.documentElement,
+        			resizee = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        			recalc = function() {
+            			var clientWidth = docEl.clientWidth;
+            			if (!clientWidth) return;
+    						docEl.style.fontSize = 12*(clientWidth / 375) + 'px';
+   						};
+    				if (!doc.addEventListener) return;
+    				win.addEventListener(resizee, recalc, false);
+    				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="mainWrap" class="mainWrap">
+		</div>
+		
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="js/share.js"></script>
+		
+		<!-- tracking code V1 -->
+	</body>
+</html>
+
+

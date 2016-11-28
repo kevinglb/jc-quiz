@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html lang='cn'>
+	<head>
+		<meta name="description" content="">
+		<meta charset="utf-8">
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+    	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<!-- rem js based on clientWidth-->
+		<script async type="text/javascript">
+			(function(doc, win) {
+    			var docEl = doc.documentElement,
+        			resizee = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        			recalc = function() {
+            			var clientWidth = docEl.clientWidth;
+            			if (!clientWidth) return;
+    						docEl.style.fontSize = 12*(clientWidth / 375) + 'px';
+   						};
+    				if (!doc.addEventListener) return;
+    				win.addEventListener(resizee, recalc, false);
+    				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="mainWrap" class="mainWrap">
+			<div class="warning">乐享美酒需理性</div>
+			<div class="startWrap">
+				<div class="ageWrap">
+					<p class="text-center title">你是否已年满18岁？</p>
+					<a class="ageBtn yesBtn poa">是</a>
+					<a class="ageBtn noBtn poa">否</a>
+					<p class="tips text-center">您进入该网站即表明您<br/>同意我们的隐私政策<br/>条款和条件及Cookie政策</p> 
+				</div>
+				<div class="swipeWrap">
+
+					<div class="vicent">
+					</div>
+				</div>
+			</div>
+			<div class="quizWrap">
+				<div class="bgWrap"></div>
+				<div class="question swiper-container">
+  					<div class="swiper-wrapper">
+    					<div class="swiper-slide quiz-1">
+    						<div class="quiz-title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+    						</div>
+    					</div>
+    					<div class="swiper-slide quiz-2">
+    					</div>
+    					<div class="swiper-slide quiz-3">
+    					</div>
+    					<div class="swiper-slide quiz-4">
+    					</div>
+    					<div class="swiper-slide quiz-5">
+    					</div>
+    					<div class="swiper-slide quiz-6">
+    					</div>
+    					<div class="swiper-slide quiz-7">
+    					</div>
+    					<div class="swiper-slide quiz-8">
+    					</div>
+    				</div>
+				</div>
+			</div>
+			<div class="resultWrap">
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<!-- <script type="text/javascript" src="js/share.js"></script> -->
+		
+		<!-- tracking code V1 -->
+	</body>
+</html>
+
+
