@@ -62,10 +62,11 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   transition: all 200ms ease-in-out;
 }
 
+
 .startWrap{background: transparent url('../img/startWrap-bg.jpg') no-repeat;background-size: cover;}
 
 .resultWrap{transform: translate3d(100%,0,0);}
-.swipeWrap{display: none}
+.swipeWrap{background: transparent url('../img/vicent.png') no-repeat;background-size: cover;display: none;font-size: 1.25rem}
 .startWrap .ageWrap,.startWrap .swipeWrap{
   position: absolute;
   width: 100%;
@@ -73,24 +74,165 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   color:#fff;
 }
 
-.ageWrap{background-color: rgba()}
-.ageWrap .title{position:relative;padding-top:15rem;font-size: 1.4rem;letter-spacing: 0.25rem;}
+/*swipeWrap static part*/
+.ageWrap .title{position:relative;padding-top:15rem;font-size: 1.5rem;letter-spacing: 0.45rem;}
 .ageWrap .tips{position: relative;margin-top: 12rem;opacity: 0.85;line-height: 1.8;}
 .ageBtn{
-    width: 4rem;
-    height: 2.8rem;
+    width: 6rem;
+    height: 4rem;
     display: block;
     top: 20rem;
     background-color: #000;
     font-size: 1.5rem;
     text-align: center;
-    line-height: 2.8rem;
-
+    line-height: 4rem;
+    background: transparent url('../img/startWrap-icon.png') no-repeat;
+    background-size: cover;
+    background-position:100% 0; 
 }
-.ageWrap .yesBtn{left:9.5rem;}
+.ageWrap .yesBtn{left:8rem;}
 .ageWrap .noBtn{left:17rem;}
 
+.swipeWrap .vicent-pop{
+  position: absolute;
+  top: 4rem;
+  left: 10rem;
+  width: 10rem;
+  height: 28.2rem;
+}
+.swipeWrap .vicent-pop p{
+  width: 1rem;
+  word-wrap: break-word;
+  position: absolute;
+  opacity: 0;
+}
+.swipeWrap .vicent-pop p:first-of-type{left: 5.5rem;top: 3rem}
+.swipeWrap .vicent-pop p:last-of-type{left: 2.5rem;top: 6rem;}
+
+.swipeWrap .swipePrompt{
+  position: absolute;
+  left: 50%;
+  width: 17rem;
+  height: 14.6rem;
+  margin-left: -9rem;
+  top: 14rem;
+}
+.swipeWrap .swipePrompt .lp, .swipeWrap .swipePrompt .rp{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background:  transparent url('../img/swipe-prompt.png') no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+.swipeWrap .swipePrompt .lp{left: 0;}
+.swipeWrap .swipePrompt .rp{left: 50%;background-position: 100% 0;}
+.swipeWrap .swipePrompt p{
+  width: 1rem;
+  word-wrap: break-word;
+  position: absolute;
+} 
+.swipeWrap .swipePrompt .lp p{left: 4.5rem;top: 1.5rem;}
+.swipeWrap .swipePrompt .rp p{left: 2.5rem;top: 4.5rem;}
+.swipeWrap .swipePrompt .finger{
+  background:  transparent url('../img/startWrap-icon.png') no-repeat;
+  background-size: cover;
+  width: 3rem;
+  height: 4rem;
+  background-position: 0 0;
+  position: absolute;
+  opacity: 0;
+  top: 10rem;
+  left:5.5rem;
+}
+/*swipeWrap animation part*/
+.swipeWrap .vicent-pop.animated{
+  background: transparent url('../img/vicent-pop.png') no-repeat;
+  background-size: cover; 
+  -webkit-animation: popUp 180ms steps(1);
+  animation: popUp 180ms steps(1);
+  transition:all Linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.swipeWrap .vicent-pop.animated p{
+  -webkit-animation: fadeIn 200ms 180ms;
+  animation: fadeIn 200ms  180ms;
+  transition:all Linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+    background-position: 0 0; 
+  }
+  50%{
+    opacity: 1;
+    background-position: 0 50%
+  }
+  100% {
+    opacity: 1;
+    background-position: 0 100%;
+  }
+}
+@-webkit-keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+    background-position: 0 0; 
+  }
+  50%{
+    opacity: 1;
+    background-position: 0 50%
+  }
+  100% {
+    opacity: 1;
+    background-position: 0 100%;
+  }
+}
+
+.swipeWrap .swipePrompt.animated .lp{
+  -webkit-animation: fadeIn 250ms 600ms;
+  animation: fadeIn 250ms  600ms;
+  transition:all Linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.swipeWrap .swipePrompt.animated .rp{
+  -webkit-animation: fadeIn 250ms 3500ms;
+  animation: fadeIn 250ms 3500ms;
+  transition:all Linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.swipeWrap .swipePrompt.animated .finger{
+  -webkit-animation: move 5000ms  steps(1) 1250ms;
+  animation: move 5000ms  steps(1)  1250ms;
+  transition:all Linear;
+}
+@keyframes move{
+  0%{opacity: 1;top: 10rem;left:5.5rem}
+  10%{opacity: 1；top: 10rem;left:3.5rem}
+  20%{opacity: 1;top: 10rem;left:5.5rem}
+  30%{opacity: 1;top: 10rem;left:3.5rem}
+  40%{opacity: 0;top: 10rem;left:3.5rem}
+  50%{opacity: 0;top:2rem;left: 10rem}
+  60%{opacity: 1;top: 2rem;left:10rem}
+  70%{opacity: 1;top: 2rem;left:12rem}
+  80%{opacity: 1;top:2rem;left: 10rem}
+  90%{opacity: 1;top:2rem;left: 12rem}
+  100%{opacity: 0;top:2rem;left: 12rem}
+}
 /* quizWrap */
+.quizWrap{display: block;transform: translate3d(100%,0,0);}
+.quizWrap.show{transform: translate3d(0,0,0);}
 .quizWrap .bgWrap{
   position:absolute;
   width:100%;
@@ -124,8 +266,8 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   clear: both;
 }
 .answerWrap .icon{
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 55px;
+  height: 50px;
   position: relative;
   float: left;
   background: transparent url('../img/icon-2.png') no-repeat;
@@ -153,19 +295,19 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   left:6rem;top:39rem;
 }
 .quiz-1 .answerWrap[data-an="1"] .icon{
-  background-position: -0.75rem -0.8rem;
+  background-position: -8px -8px;
 }
 .quiz-1 .answerWrap[data-an="2"] .icon{
-  background-position: -0.75rem -4.8rem;
+  background-position: -8px -60px;
 }
 .quiz-1 .answerWrap[data-an="3"] .icon{
-  background-position: -0.75rem -9.5rem;
+  background-position: -8px -114px;
 }
 .quiz-1 .answerWrap[data-an="4"] .icon{
-  background-position: -0.75rem -13.5rem;
+  background-position: -8px -162px;
 }
 .quiz-1 .answerWrap[data-an="5"] .icon{
-  background-position: -0.75rem -17.5rem;
+  background-position: -8px -210px;
 }
 
 .quiz-2 .answerWrap[data-an="1"]{
@@ -181,18 +323,17 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   left:8rem;top:37rem;
 }
 .quiz-2 .answerWrap[data-an="1"] .icon{
-  background-position: -6rem -0.8rem;
+  background-position: -70px -12px;
 }
 .quiz-2 .answerWrap[data-an="2"] .icon{
-  background-position: -6rem -4.8rem;
+  background-position: -70px -64px;
 }
 .quiz-2 .answerWrap[data-an="3"] .icon{
-  background-position: -6rem -9.5rem;
+  background-position: -70px -115px;
 }
 .quiz-2 .answerWrap[data-an="4"] .icon{
-  background-position: -6rem -14.2rem;
+  background-position: -80px -168px;
 }
-
 
 .quiz-3 .answerWrap[data-an="1"]{
   left:3rem;top:16rem;
@@ -207,20 +348,54 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   left:8rem;top:37rem;
 }
 .quiz-3 .answerWrap[data-an="1"] .icon{
-  background-position: -11.5rem -0.8rem;
+  background-position: -135px -11px;
 }
 .quiz-3 .answerWrap[data-an="2"] .icon{
-  background-position: -11.5rem -5.75rem;
-  height: 6rem;
-  margin-top: -.75rem;
+    background-position: -135px -67px;
+    height: 72px;
+    margin-top: -9px;
 }
 .quiz-3 .answerWrap[data-an="3"] .icon{
-  background-position: -11.5rem -11.75rem;
-  height: 6rem;
-  margin-top: -.75rem;
+    background-position: -135px -140px;
+    height: 72px;
+    margin-top: -9px;
 }
 .quiz-3 .answerWrap[data-an="4"] .icon{
-  background-position: -11.5rem -17.75rem;
+  background-position: -135px -214px;
+}
+
+.quiz-4 .answerWrap[data-an="1"]{
+  left:3rem;top:16rem;
+}
+.quiz-4 .answerWrap[data-an="2"]{
+  left:7rem;top:23rem;
+}
+.quiz-4 .answerWrap[data-an="3"]{
+  left:3rem;top:30rem;
+}
+.quiz-4 .answerWrap[data-an="4"]{
+  left:5rem;top:37rem;
+}
+.quiz-4 .answerWrap[data-an="1"] .icon{
+    background-position: -198px -1px;
+    height: 70px;
+    margin-top: -9px;
+}
+.quiz-4 .answerWrap[data-an="2"] .icon{
+  background-position: -198px -82px;
+  height: 70px;
+  margin-top: -12px;
+}
+.quiz-4 .answerWrap[data-an="3"] .icon{
+  background-position: -193px -156px;
+  height: 70px;
+  margin-top: -12px;
+  width: 70px;
+}
+.quiz-4 .answerWrap[data-an="4"] .icon{
+  background-position: -198px -235px;
+  height: 74px;
+  margin-top: -12px;
 }
 
 .animated {
