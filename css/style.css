@@ -161,8 +161,8 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .swipeWrap .vicent.animated .vicent-lips{
   background: transparent url('../img/vicent-lips.png') no-repeat; 
   background-size: cover; 
-  -webkit-animation: liping 640ms steps(1);
-  animation: liping 640ms steps(1);
+  -webkit-animation: liping 540ms steps(1);
+  animation: liping 540ms steps(1);
   webkit-animation-iteration-count: 4;
   animation-iteration-count: 4;
   transition:all Linear;
@@ -193,7 +193,7 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   0% {
     opacity: 0;
   }
-  33%{
+  30%{
     opacity: 1;
     background-position: 0 0; 
   }

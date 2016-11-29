@@ -26,12 +26,13 @@ $(document).ready(function(){
 		if($(".swipeWrap").is(":visible")){
 			setTimeout(function(){
 				$(".swipeWrap .vicent-pop").addClass("animated");
+				$(".swipeWrap .vicent").addClass("animated");
 			},1000);
 			setTimeout(function(){
-				$(".swipeWrap .vicent-pop").fadeOut().removeClass(".animated");
-				$(".swipeWrap .swipePrompt").addClass("animated");
-				var ele = document.getElementById('swipeWrap');
-				detectSwipe(ele,60,switchToQuestion);
+				//$(".swipeWrap .vicent-pop").fadeOut().removeClass(".animated");
+				//$(".swipeWrap .swipePrompt").addClass("animated");
+				//var ele = document.getElementById('swipeWrap');
+				//detectSwipe(ele,60,switchToQuestion);
 			},2500);
 
 			
