@@ -3,19 +3,6 @@ $(document).ready(function(){
 	var JC = {};
 	JC.gender = "";
 
-	var quizSwiper = new Swiper('.swiper-container',
-		{
-			noSwiping : true,
-			noSwipingClass : 'stop-swiping',	
-			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-    			swiperAnimateCache(swiper); //隐藏动画元素 
-    			swiperAnimate(swiper); //初始化完成开始动画
-    		}, 
-  			onSlideChangeEnd: function(swiper){ 
-    			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
-  			}
-  	});
-	
 	/*
 		at startWrap click on yes button
 		setup those animations' timeline
@@ -40,10 +27,29 @@ $(document).ready(function(){
 		
 	});
 
+	//click events for answering question
+	$(".quizWrap .swiper-slide .answerWrap").bind('click',function(){
+		
+		var currentQuiz = $(this).parent('swiper-slide').attr('data-quiz');
+	});
 
 	//callback function after detectSwipe and get the gender based on direction
 	function switchToQuestion(dir){
 		$(".quizWrap").addClass("show");
+		//init swiper when quizWrap shows
+		JC.quizSwiper = new Swiper('.swiper-container',
+		{
+			noSwiping : true,
+			noSwipingClass : 'stop-swiping',	
+			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    			swiperAnimateCache(swiper); //隐藏动画元素 
+    				swiperAnimate(swiper); //初始化完成开始动画
+
+    		}, 
+  			onSlideChangeEnd: function(swiper){ 
+    			swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  			}
+  		});
 		if(dir === "left"){
 			JC.gender = "male";
 			$(".quizWrap").find(".quiz-8").addClass('male');
