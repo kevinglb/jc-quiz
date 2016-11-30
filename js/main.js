@@ -29,11 +29,11 @@ $(document).ready(function(){
 				$(".swipeWrap .vicent").addClass("animated");
 			},1000);
 			setTimeout(function(){
-				//$(".swipeWrap .vicent-pop").fadeOut().removeClass(".animated");
-				//$(".swipeWrap .swipePrompt").addClass("animated");
-				//var ele = document.getElementById('swipeWrap');
-				//detectSwipe(ele,60,switchToQuestion);
-			},2500);
+				$(".swipeWrap .vicent-pop").hide().removeClass(".animated");
+				$(".swipeWrap .swipePrompt").addClass("animated");
+				var ele = document.getElementById('swipeWrap');
+				detectSwipe(ele,60,switchToQuestion);
+			},4900);
 
 			
 		}

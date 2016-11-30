@@ -97,12 +97,28 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   height: 100%;
   overflow: hidden;
 }
+.swipeWrap .vicent .vicent-eyes{
+  position: absolute;
+  width: 11.20rem;
+  height: 20.5rem;
+  right: 0.5rem;
+  top:15.75rem;
+  opacity: 0;
+}
 .swipeWrap .vicent .vicent-lips{
   position: absolute;
   width: 11.20rem;
   height: 20.5rem;
   right: 0.5rem;
   top:15.75rem;
+  opacity: 0;
+}
+.swipeWrap .vicent-head{
+  position: absolute;
+  width: 11.20rem;
+  height: 20.5rem;
+  right: 0rem;
+  top: 15.5rem;
   opacity: 0;
 }
 .swipeWrap .vicent-pop{
@@ -158,21 +174,51 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   left:5.5rem;
 }
 /*swipeWrap animation part*/
+.swipeWrap .vicent.animated .vicent-eyes{
+  background: transparent url('../img/vicent-eyes.png') no-repeat; 
+  background-size: cover; 
+  -webkit-animation: bliking 300ms steps(1) 600ms;
+  animation: bliking 300ms steps(1) 600ms;
+  transition:all Linear;
+}
+
+@keyframes bliking{
+  0%{opacity: 0}
+  33%{opacity: 1;background-position: 0 0%}
+  66%{opacity: 1;background-position: 0 50%}
+  100%{opacity: 1;background-position: 0 100%}
+}
 .swipeWrap .vicent.animated .vicent-lips{
   background: transparent url('../img/vicent-lips.png') no-repeat; 
   background-size: cover; 
-  -webkit-animation: liping 540ms steps(1);
-  animation: liping 540ms steps(1);
+  -webkit-animation: liping 750ms steps(1);
+  animation: liping 750ms steps(1);
   webkit-animation-iteration-count: 4;
   animation-iteration-count: 4;
   transition:all Linear;
 }
 @keyframes liping{
   0%{opacity: 0}
-  33%{opacity: 1;background-position: 0 0%}
-  66%{opacity: 1;background-position: 0 50%}
-  100%{opacity: 1;background-position: 0 100%}
+  25%{opacity: 1;background-position: 0 0%}
+  50%{opacity: 1;background-position: 0 50%}
+  75%{opacity: 1;background-position: 0 100%}
+  100%{opacity: 0;}
 }
+.swipeWrap .vicent.animated .vicent-head{
+  background: transparent url('../img/vicent-head.png') no-repeat; 
+  background-size: cover; 
+  -webkit-animation: fadeInOut 750ms   steps(1) 3200ms;
+  animation: fadeInOut 750ms  steps(1) 3200ms;
+  transition:all Linear;
+}
+@keyframes fadeInOut{
+  0%{opacity: 0}
+  25%{opacity: 1}
+  50%{opacity: 1}
+  75%{opacity: 1}
+  100%{opacity: 0}
+}
+
 .swipeWrap .vicent-pop.animated{
   background: transparent url('../img/vicent-pop.png') no-repeat;
   background-size: cover; 
