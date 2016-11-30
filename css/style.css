@@ -64,9 +64,8 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 
 .startWrap{background: transparent url('../img/startWrap-bg.jpg') no-repeat;background-size: cover;}
-
-.resultWrap{transform: translate3d(100%,0,0);}
 .swipeWrap{background: transparent url('../img/vicent.png') no-repeat;background-size: cover;display: none;font-size: 1.25rem}
+.resultWrap{transform: translate3d(100%,0,0);background: transparent url('../img/result-bg.jpg') no-repeat;background-size: cover;background-position: 0 0 }
 .startWrap .ageWrap,.startWrap .swipeWrap{
   position: absolute;
   width: 100%;
@@ -640,6 +639,23 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   top: 2rem;
   margin-left: 2rem;
 }
+
+/* resultWrap part*/
+.resultWrap.animated{
+  -webkit-animation: scrollDown 750ms 100ms;
+  animation: scrollDown 750ms  100ms;
+  transition:all ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(0.37, 0.7, 0.25, 1)
+}
+
+@keyframes scrollDown{
+  0%{background-position: 0 0}
+  100%{background-position: 0 100%}
+}
+/*animation part*/
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
