@@ -31,8 +31,10 @@ url：api/index.php
 
 action=add_question
 question_no：1-8
-answer：格式：单选（1-6），多选（1,4）
-answer_all：当提交第8题时提交是提交该值，格式：1;3;4;3;5;2,4;3;6
+answer：格式：单选（1-6），多选（1|4）
+utm_source
+utm_medium
+
 
 返回值：json
 
