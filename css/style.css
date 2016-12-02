@@ -65,7 +65,10 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 .startWrap{background: transparent url('../img/startWrap-bg.jpg') no-repeat;background-size: cover;}
 .swipeWrap{background: transparent url('../img/vicent.png') no-repeat;background-size: cover;display: none;font-size: 1.25rem}
-.resultWrap{display:none;background: transparent url('../img/result-bg.jpg') no-repeat;background-size: cover;background-position: 0 0 }
+.resultWrap{display:none;}
+.resultWrap.loaded{
+  background: transparent url('../img/result-bg.jpg') no-repeat;background-size: cover;background-position: 0 0; 
+}
 .startWrap .ageWrap,.startWrap .swipeWrap{
   position: absolute;
   width: 100%;
@@ -296,7 +299,7 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 }
 @keyframes move{
   0%{opacity: 1;top: 10rem;left:5.5rem}
-  10%{opacity: 1；top: 10rem;left:3.5rem}
+  10%{opacity: 1;top: 10rem;left:3.5rem}
   20%{opacity: 1;top: 10rem;left:5.5rem}
   30%{opacity: 1;top: 10rem;left:3.5rem}
   40%{opacity: 0;top: 10rem;left:3.5rem}
@@ -314,11 +317,13 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   position:absolute;
   width:100%;
   height:100%;
-  background:transparent url('../img/quiz-bg.jpg') no-repeat;
-  background-size: cover;
+  
   transition: all 350ms linear;
   transform: scale(1.2); 
-
+}
+.quizWrap .bgWrap.loaded{
+  background:transparent url('../img/quiz-bg.jpg') no-repeat;
+  background-size: cover;
 }
 .quizWrap .bgWrap.quiz-1{
   background-position: 0.5rem 3rem;
@@ -375,11 +380,13 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   clear: both;
 }
 .answerWrap .icon{
-  width: 55px;
-  height: 50px;
+  width: 6rem;
+  height: 4rem;
   position: relative;
   float: left;
-  background: transparent url('../img/icon-2.png') no-repeat;
+  background: transparent url('../img/icon.png') no-repeat;
+  background-size: cover;
+  transform: scale(1.1);
 }
 
 .quiz-1 .titleWrap{
@@ -428,316 +435,293 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 }
 .quiz-8.female .icon{
   background-image: url('../img/quiz8-female.png');
+  width: 10rem;
+  height: 6.5rem;
 }
 .quiz-8.male .icon{
   background-image: url('../img/quiz8-male.png');
+  width: 10rem;
+  height: 7rem;
 }
-.quiz-8 .titleWrap{
-    width: 20rem;
-    height: 7rem;
-    background-position: -0.5rem -32.5rem;
-    padding-top: 2.5rem;
-    margin-left: -10rem;
-}
+
 .quiz-1 .answerWrap[data-an="1"]{
-  left:3rem;top:15rem;
+  left:2rem;top:16rem;
 }
 .quiz-1 .answerWrap[data-an="2"]{
-  left:8rem;top:21rem;
+  left:7.5rem;top:21rem;
 }
 .quiz-1 .answerWrap[data-an="3"]{
-  left:6rem;top:27rem;
+  left:5.5rem;top:27rem;
 }
 .quiz-1 .answerWrap[data-an="4"]{
-  left:3rem;top:33rem;
+  left:2rem;top:33rem;
 }
 .quiz-1 .answerWrap[data-an="5"]{
-  left:6rem;top:39rem;
+  left:5.5rem;top:39rem;
 }
 .quiz-1 .answerWrap[data-an="1"] .icon{
-  background-position: -8px -8px;
+  background-position: 0 0.5rem;
 }
 .quiz-1 .answerWrap[data-an="2"] .icon{
-  background-position: -8px -60px;
+  background-position: 0 -3rem;
 }
 .quiz-1 .answerWrap[data-an="3"] .icon{
-  background-position: -8px -114px;
+  background-position: 0 -7rem;
 }
 .quiz-1 .answerWrap[data-an="4"] .icon{
-  background-position: -8px -162px;
+  background-position: 0 -10.5rem;
 }
 .quiz-1 .answerWrap[data-an="5"] .icon{
-  background-position: -8px -210px;
+  background-position: 0 -13.5rem;
 }
 
 .quiz-2 .answerWrap[data-an="1"]{
-  left:3rem;top:16rem;
+  left:1.5rem;top:16rem;
 }
 .quiz-2 .answerWrap[data-an="2"]{
-  left:5rem;top:23rem;
+  left:4rem;top:23rem;
 }
 .quiz-2 .answerWrap[data-an="3"]{
-  left:4rem;top:30rem;
+  left:3rem;top:30rem;
 }
 .quiz-2 .answerWrap[data-an="4"]{
-  left:8rem;top:37rem;
+  left:7rem;top:37rem;
 }
 .quiz-2 .answerWrap[data-an="1"] .icon{
-  background-position: -70px -12px;
+  background-position: 0 -17.5rem;
 }
 .quiz-2 .answerWrap[data-an="2"] .icon{
-  background-position: -70px -64px;
+  background-position: 0 -21rem;
 }
 .quiz-2 .answerWrap[data-an="3"] .icon{
-  background-position: -70px -115px;
+  background-position: 0 -25rem;
 }
 .quiz-2 .answerWrap[data-an="4"] .icon{
-  background-position: -80px -168px;
+  background-position: 0 -28.5rem;;
 }
 
 .quiz-3 .answerWrap[data-an="1"]{
-  left:3rem;top:16rem;
+  left:2rem;top:17rem;
 }
 .quiz-3 .answerWrap[data-an="2"]{
-  left:6rem;top:23rem;
+  left:4rem;top:23rem;
 }
 .quiz-3 .answerWrap[data-an="3"]{
-  left:3rem;top:30rem;
+  left:2rem;top:31rem;
 }
 .quiz-3 .answerWrap[data-an="4"]{
-  left:8rem;top:37rem;
+  left:6rem;top:38rem;
 }
 .quiz-3 .answerWrap[data-an="1"] .icon{
-  background-position: -135px -11px;
+  background-position: 0 -32rem;
 }
 .quiz-3 .answerWrap[data-an="2"] .icon{
-    background-position: -135px -67px;
-    height: 72px;
-    margin-top: -9px;
+    background-position: 0 -36rem;
+    height: 5rem;
+    margin-top: -0.5rem;
 }
 .quiz-3 .answerWrap[data-an="3"] .icon{
-    background-position: -135px -140px;
-    height: 72px;
-    margin-top: -9px;
+    background-position: 0 -41rem;
+    height: 5rem;
+    margin-top: -0.5rem;
 }
 .quiz-3 .answerWrap[data-an="4"] .icon{
-  background-position: -135px -214px;
+  background-position: 0 -46rem;
 }
 
 .quiz-4 .answerWrap[data-an="1"]{
-  left:3rem;top:16rem;
+  left:2.5rem;top:16rem;
 }
 .quiz-4 .answerWrap[data-an="2"]{
   left:6rem;top:23rem;
 }
 .quiz-4 .answerWrap[data-an="3"]{
-  left:3rem;top:30rem;
+  left:2.5rem;top:31rem;
 }
 .quiz-4 .answerWrap[data-an="4"]{
-  left:5rem;top:37rem;
+  left:4.5rem;top:38rem;
 }
 .quiz-4 .answerWrap[data-an="1"] .icon{
-    background-position: -198px -1px;
-    height: 70px;
-    margin-top: -9px;
+   background-position: 0 -50rem;
+    height: 5rem;
+    margin-top: -0.5rem;
 }
 .quiz-4 .answerWrap[data-an="2"] .icon{
-  background-position: -198px -82px;
-  height: 70px;
-  margin-top: -12px;
+      background-position: 0 -55.5rem;
+    height: 5rem;
+    margin-top: -0.5rem;
 }
 .quiz-4 .answerWrap[data-an="3"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+     background-position: 0 -60.5rem;
+    height: 5rem;
+    margin-top: -1rem;
 }
 .quiz-4 .answerWrap[data-an="4"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
-}
+    background-position: 0 -66rem;
+    height: 5rem;
+    margin-top: -0.5rem;}
 .quiz-5 .answerWrap[data-an="1"]{
-  left:3rem;top:16rem;
+  left:5rem;top:16rem;
 }
 .quiz-5 .answerWrap[data-an="2"]{
-  left:6rem;top:23rem;
+  left:2rem;top:22rem;
 }
 .quiz-5 .answerWrap[data-an="3"]{
-  left:3rem;top:30rem;
+  left:6rem;top:28rem;
 }
 .quiz-5 .answerWrap[data-an="4"]{
-  left:5rem;top:37rem;
+  left:3rem;top:34rem;
 }
 .quiz-5 .answerWrap[data-an="5"]{
-  left:5rem;top:37rem;
+  left:3rem;top:40rem;
 }
 .quiz-5 .answerWrap[data-an="1"] .icon{
-    background-position: -198px -1px;
-    height: 70px;
-    margin-top: -9px;
+  background-position: 0 -71rem;
 }
 .quiz-5 .answerWrap[data-an="2"] .icon{
-  background-position: -198px -82px;
-  height: 70px;
-  margin-top: -12px;
+  background-position: 0 -74rem;
 }
 .quiz-5 .answerWrap[data-an="3"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+  background-position: 0 -77.5rem;
 }
 .quiz-5 .answerWrap[data-an="4"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
+  background-position: 0 -81.5rem;
 }
-
+.quiz-5 .answerWrap[data-an="5"] .icon{
+  background-position: 0 -85rem;
+}
 .quiz-6 .answerWrap[data-an="1"]{
-  left:5rem;top:20rem;
+  left:5rem;top:17rem;
 }
 .quiz-6 .answerWrap[data-an="2"]{
-  left: 15rem;top: 22rem;
+  left: 17rem;top: 19rem;
 }
 .quiz-6 .answerWrap[data-an="3"]{
-  left: 12rem;top: 25rem;
+  left: 10rem;top: 26rem;
 }
 .quiz-6 .answerWrap[data-an="4"]{
-  left: 3rem;top: 30rem;
+  left: 1rem;top: 30rem;
 }
 .quiz-6 .answerWrap[data-an="5"]{
-  left: 15rem;top: 31rem;
+  left: 17rem;top: 31rem;
 }
 .quiz-6 .answerWrap[data-an="6"]{
-  left: 5rem;top: 36rem;
+  left: 5rem;top: 37rem;
 }
 .quiz-6 .answerWrap[data-an="7"]{
-  left: 15rem;top: 38rem;
+  left: 16rem;top: 38rem;
 }
 .quiz-6 .answerWrap[data-an="1"] .icon{
-    background-position: -198px -1px;
-    height: 70px;
-    margin-top: -9px;
+  background-position: 0 -89.5rem;
+  height: 5rem;
+  margin-top: -0.5rem;
 }
 .quiz-6 .answerWrap[data-an="2"] .icon{
-  background-position: -198px -82px;
-  height: 70px;
-  margin-top: -12px;
+  background-position: 0 -94.5rem;
+  height: 5rem;
+  margin-top: -0.5rem;
 }
 .quiz-6 .answerWrap[data-an="3"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+  background-position: 0 -99.5rem;
+  height: 5rem;
+  margin-top: -0.5rem;
 }
 .quiz-6 .answerWrap[data-an="4"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
+  background-position: 0 -104rem;
 }
 .quiz-6 .answerWrap[data-an="5"] .icon{
-  background-position: -198px -82px;
-  height: 70px;
-  margin-top: -12px;
+  background-position: 0 -107rem;
 }
 .quiz-6 .answerWrap[data-an="6"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+  background-position: 0 -111rem;
 }
 .quiz-6 .answerWrap[data-an="7"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
+  background-position: 0 -115rem;
+  height: 5rem;
+  margin-top:-0.5rem;
 }
 
 .quiz-7 .answerWrap[data-an="1"]{
-  left: 6rem;top: 19rem;
+  left: 6rem;top: 18rem;
 }
 .quiz-7 .answerWrap[data-an="2"]{
-  left: 15rem;top: 24rem;
+  left: 15rem;top: 25rem;
 }
 .quiz-7 .answerWrap[data-an="3"]{
-  left: 4rem;top: 30rem;
+  left: 4rem;top: 31rem;
 }
 .quiz-7 .answerWrap[data-an="4"]{
-  left: 11rem;top: 36rem;
+  left: 10rem;top: 38rem;
 }
 
 .quiz-7 .answerWrap[data-an="1"] .icon{
-    background-position: -198px -1px;
-    height: 70px;
-    margin-top: -9px;
+  background-position: 0 -120rem;
 }
 .quiz-7 .answerWrap[data-an="2"] .icon{
-  background-position: -198px -82px;
-  height: 70px;
-  margin-top: -12px;
+background-position: 0 -123.5rem;
 }
 .quiz-7 .answerWrap[data-an="3"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+background-position: 0 -127.5rem;
 }
 .quiz-7 .answerWrap[data-an="4"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
+background-position: 0 -131rem;    height: 3.5rem;
 }
 
 
 .quiz-8 .answerWrap[data-an="1"]{
-  left: 4rem;top: 19rem;
+  left: 4rem;top: 15rem;
 }
 .quiz-8 .answerWrap[data-an="2"]{
-  left: 11rem;top: 19rem;
+  left: 16rem;top: 15rem;
 }
 .quiz-8 .answerWrap[data-an="3"]{
-  left: 4rem;top: 30rem;
+  left: 4rem;top: 25rem;
 }
 .quiz-8 .answerWrap[data-an="4"]{
-  left: 11rem;top: 33rem;
+  left: 16rem;top: 25rem;
 }
 .quiz-8 .answerWrap[data-an="5"]{
-  left: 4rem;top: 44rem;
+  left: 4rem;top: 35rem;
 }
 .quiz-8 .answerWrap[data-an="6"]{
-  left: 11rem;top: 44rem;
+  left: 16rem;top: 35rem;
 }
-.quiz-8 .answerWrap[data-an="1"] .icon{
-    background-position: -198px -1px;
-    height: 70px;
-    margin-top: -9px;
+
+.quiz-8.male .answerWrap[data-an="1"] .icon{
+  background-position: 0 -4.75rem;
 }
-.quiz-8 .answerWrap[data-an="2"] .icon{
-  background-position: -198px -82px;
-  height: 70px;
-  margin-top: -12px;
+.quiz-8.male .answerWrap[data-an="2"] .icon{
+  background-position: 0 -11.75rem;
 }
-.quiz-8 .answerWrap[data-an="3"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+.quiz-8.male .answerWrap[data-an="3"] .icon{
+  background-position: 0 -19.5rem;
 }
-.quiz-8 .answerWrap[data-an="4"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
+.quiz-8.male .answerWrap[data-an="4"] .icon{
+  background-position: 0 -26.5rem;
 }
-.quiz-8 .answerWrap[data-an="5"] .icon{
-  background-position: -193px -156px;
-  height: 70px;
-  margin-top: -12px;
-  width: 70px;
+.quiz-8.male .answerWrap[data-an="5"] .icon{
+  background-position: 0 -33.5rem;
 }
-.quiz-8 .answerWrap[data-an="6"] .icon{
-  background-position: -198px -235px;
-  height: 74px;
-  margin-top: -12px;
+.quiz-8.male .answerWrap[data-an="6"] .icon{
+  background-position: 0 -41.75rem;
+}
+.quiz-8.female .answerWrap[data-an="1"] .icon{
+  background-position: 0 -4.5rem;
+}
+.quiz-8.female .answerWrap[data-an="2"] .icon{
+  background-position: 0 -10.75rem;
+}
+.quiz-8.female .answerWrap[data-an="3"] .icon{
+  background-position: 0 -17.5rem;
+}
+.quiz-8.female .answerWrap[data-an="4"] .icon{
+  background-position: 0 -24.75rem;
+}
+.quiz-8.female .answerWrap[data-an="5"] .icon{
+  background-position: 0 -32rem;
+}
+.quiz-8.female .answerWrap[data-an="6"] .icon{
+  background-position: 0 -39.5rem;
 }
 .answerWrap .answer{
   background: transparent url('../img/answer-bg.png') no-repeat;
@@ -749,7 +733,24 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   text-align: center;
   z-index: -1;
   line-height: 2.75rem;
-    
+  font-size: 1.2rem
+}
+.quiz-8 .titleWrap{
+    width: 12rem;
+    height: 5rem;
+    background-position: 0 0;
+    padding-top: 2rem;
+    margin-left: -6rem;
+}
+.quiz-8 .answerWrap .answer{
+  background: transparent;
+  width: 10rem;
+  top: 4.5rem;
+  z-index: 1;
+}
+.quiz-8.female .answerWrap .answer{
+
+  top: 4rem;
 }
 .quiz-1 .answerWrap[data-an="1"] .answer{
   background-position: -0.5rem -42.75rem;
@@ -758,6 +759,7 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .quiz-1 .answerWrap[data-an="2"] .answer{
   background-position: -0.5rem -39.75rem;
   top: 1.5rem;
+  left: 0.5rem
 }
 .quiz-1 .answerWrap[data-an="3"] .answer{
   background-position: -0.5rem -45.75rem;
@@ -766,21 +768,21 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 }
 .quiz-1 .answerWrap[data-an="4"] .answer{
   background-position:-0.5rem -29.5rem;
-  top: 1rem;
+  top: 1rem;left: 1rem
 }
 .quiz-1 .answerWrap[data-an="5"] .answer{
-   background-position: 0 -36.75rem;
-  top: 1rem;
+   background-position: -0.5rem -36.75rem;
+  top: 1rem;left: 1rem;
 }
 .quiz-2 .answerWrap[data-an="1"] .answer{
   background-position: -0.5rem -33rem;
   margin-left: 1rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 .quiz-2 .answerWrap[data-an="2"] .answer{
   background-position: -0.5rem -12.75rem;
   top: 1.5rem;
-  margin-left: 1rem
+  margin-left: 2rem
 }
 .quiz-2 .answerWrap[data-an="3"] .answer{
   background-position: -0.5rem -22.75rem;
@@ -789,7 +791,7 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 }
 .quiz-2 .answerWrap[data-an="4"] .answer{
   background-position:-0.5rem -29.5rem;
-  top: 1rem;
+  top: 1rem;margin-left: 1rem
 }
 .quiz-3 .answerWrap[data-an="1"] .answer{
   background-position: -0.5rem -26rem;
@@ -799,21 +801,21 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .quiz-3 .answerWrap[data-an="2"] .answer{
   background-position: -0.5rem -12.75rem;
   top: 1.5rem;
-  margin-left: 1rem
+  margin-left: 2rem
 }
 .quiz-3 .answerWrap[data-an="3"] .answer{
   background-position: -0.5rem -16rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 .quiz-3 .answerWrap[data-an="4"] .answer{
   background-position:-0.5rem -29.5rem;
-  top: 1rem;
+  top: 1rem;margin-left: 1rem;
 }
 
 .quiz-4 .answerWrap[data-an="1"] .answer{
   background-position: -0.5rem -26rem;
   margin-left: 1rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 .quiz-4 .answerWrap[data-an="2"] .answer{
   background-position: -0.5rem -25.75rem;
@@ -831,6 +833,85 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   margin-left: 2rem;
 }
 
+.quiz-5 .answerWrap[data-an="1"] .answer{
+  background-position: 0 -45.75rem;
+  top: 1rem;margin-left: -0.5rem
+}
+.quiz-5 .answerWrap[data-an="2"] .answer{
+  background-position: 0 0;
+  top: 1rem;margin-left: 3rem
+}
+.quiz-5 .answerWrap[data-an="3"] .answer{
+  background-position: -0.5rem -26rem;
+  top: 1rem;
+  margin-left: 1rem;
+}
+.quiz-5 .answerWrap[data-an="4"] .answer{
+  background-position: -0.5rem -12.75rem;
+  top: 1rem;
+  margin-left: 2rem;
+}
+.quiz-5 .answerWrap[data-an="5"] .answer{
+  background-position: -0.5rem -9.5rem;
+  top: 1rem;
+  margin-left: 3rem;
+}
+.quiz-5 .answerWrap[data-an="6"] .answer{
+  background-position: -0.5rem -12.75rem;
+  top: 2rem;
+  margin-left: 2rem;
+}
+.quiz-6 .answer{
+  background: transparent url(../img/icon.png) no-repeat;
+  background-position: 0rem -179rem;
+  width: 8rem;
+  height: 3.75rem;
+  line-height: 4rem;
+}
+.quiz-6 .answerWrap[data-an="1"] .answer{
+  left: 3rem;top: 1rem;
+}
+.quiz-6 .answerWrap[data-an="2"] .answer{
+  left: 3rem;
+  top: 0.5rem;
+}
+.quiz-6 .answerWrap[data-an="3"] .answer{
+    left: 2rem;
+    top: 1rem;
+}
+.quiz-6 .answerWrap[data-an="4"] .answer{
+    left: 2rem;
+    top: 1rem;
+}
+.quiz-6 .answerWrap[data-an="5"] .answer{
+    left: 2rem;
+  top: 1rem;
+}
+.quiz-6 .answerWrap[data-an="6"] .answer{
+  left: 1.5rem;
+  top: 1.5rem;
+}
+.quiz-6 .answerWrap[data-an="7"] .answer{
+  left: 1.5rem;
+  top: 1.5rem;
+}
+
+.quiz-7 .answerWrap[data-an="1"] .answer{
+  background-position:0 -22.75rem ; top: 1rem;
+}
+.quiz-7 .answerWrap[data-an="2"] .answer{
+  left: -3rem;
+  top: 1rem;
+  background-position: -1rem -49rem;
+}
+.quiz-7 .answerWrap[data-an="3"] .answer{
+  top: 1rem;
+  background-position: -0.5rem -16rem;
+}
+.quiz-7 .answerWrap[data-an="4"] .answer{
+  top: 1rem;
+  background-position: -0.5rem -46rem;
+}
 /* resultWrap part*/
 .resultWrap.animated{
   -webkit-animation: scrollDown 750ms 100ms;
@@ -1008,12 +1089,12 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   margin-left: -10rem;
 }
 .resultWrap .result.calculative .content{
-  background-position: 1rem 0;
+  background-position: 0 0;
   height: 21rem;
   top: 4rem;
 }
 .resultWrap .result.calculative .name{
-  background-position: -1.5rem -20rem;
+  background-position: -2.5rem -20rem;
   height: 5rem;
   top: 5rem;
 }
@@ -1200,7 +1281,8 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
   100%{background-position: 0 100%}
 }
 
-
+.resultWrap .shareWrap{position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: none;background:transparent url('../img/share-bg.png') no-repeat;background-size: cover}
+.resultWrap .shareWrap p{text-align: center;padding-top: 17rem;font-size: 1.25rem;line-height: 1.8;letter-spacing: 0.2rem;}
 /*animation part*/
 
 .animated {

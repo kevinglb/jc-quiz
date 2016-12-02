@@ -8,6 +8,12 @@
 		<title></title>
     	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
     	<link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- firstwarap animation images -- >
+        <link rel="preload" as="image" href="img/vicent-eyes.png">
+        <link rel="preload" as="image" href="img/vicent-pop.png">
+        <link rel="preload" as="image" href="img/vicent-lips.png">
+        <link rel="preload" as="image" href="img/vicent-head.png">
+        <link rel="preload" as="image" href="img/result-pop.png">
     	<!-- rem js based on clientWidth-->
 		<script async type="text/javascript">
 			(function(doc, win) {
@@ -24,6 +30,7 @@
 			})(document, window);
 		</script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
+
 	</head>
 	<body>
 		<div id="mainWrap" class="mainWrap">
@@ -185,12 +192,17 @@
     							<div class="answer">看网站上的相关专栏/博客/大V/公众号</div>
     							<div class="check"></div>
     						</div>
-    						<div class="answerWrap ani" data-an="3">
+                            <div class="answerWrap ani" data-an="3">
+                                <i class="icon"></i>
+                                <div class="answer">关注品牌/公司的社交媒体</div>
+                                <div class="check"></div>
+                            </div>
+    						<div class="answerWrap ani" data-an="4">
     							<i class="icon"></i>
     							<div class="answer">看相关的电视节目/网络视频</div>
     							<div class="check"></div>
     						</div>
-    						<div class="answerWrap ani" data-an="4">
+    						<div class="answerWrap ani" data-an="5">
     							<i class="icon"></i>
     							<div class="answer">与酒友分享讨论，参与现场活动</div>
     							<div class="check"></div>
@@ -315,8 +327,8 @@
                         <a class="closeBtn"></a>
                         <p>留下个人信息<br/>抽取梵高为你准备的礼物</p>
                         <input id="fullname" type="text" placeholder="姓名" />
-                        <input id="phone" data-maxlength="11" type="number" placeholder="手机" />
-                        <input id="code" type="number" placeholder=" 验证码" />
+                        <input id="phone" class="limited" data-maxlength="11" type="number" placeholder="手机" />
+                        <input id="code"  class="limited" data-maxlength="4" type="number" placeholder=" 验证码" />
                         <a class="getCodeBtn">获取</a>
                         <a class="submitBtn">提交</a>
                     </div>
@@ -337,6 +349,9 @@
                         <p>信息已记录<br/>我们将尽快邮寄给你</p>
                         <a class="tryBtn">叫小伙伴试试看</a>
                     </div>
+               </div>
+               <div class="shareWrap">
+                   <p>点击右上角<br/>呼朋唤友<br/>共聚梵高小桌喝一杯</p>
                </div>
 			</div>
 		</div>
