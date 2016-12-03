@@ -66,7 +66,7 @@ a{text-decoration: none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .startWrap{background: transparent url('../img/startWrap-bg.jpg') no-repeat;background-size: cover;}
 .swipeWrap{background: transparent url('../img/vicent.png') no-repeat;background-size: cover;display: none;font-size: 1.25rem}
 .resultWrap{display:none;}
-.resultWrap.loaded{
+.resultWrap{
   background: transparent url('../img/result-bg.jpg') no-repeat;background-size: cover;background-position: 0 0; 
 }
 .startWrap .ageWrap,.startWrap .swipeWrap{

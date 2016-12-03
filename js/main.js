@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	//init
 	var JC = {};
+	var count = 0;
 	JC.swiper = null;
 	JC.gender = "";
 	JC.getAward = false;
@@ -8,9 +9,13 @@ $(document).ready(function(){
 						{'type':'warmUp','title':'天生暖场王','content':'秒懂各路梗,深解内涵图,随口解救种种冷场危机！'},
 						{'type':'babyBicao', 'title':'壁草宝宝','content':'不想怒刷存在感,就在一边安安静静,做个萌宝吧！'},
 						{'type':'topicMaker','title':'话题制燥者','content':'上知票房毒药神演技,下知麻豆爱豆八卦史,叨逼叨是天性,分分钟撩人没鸭梨！'}];
-	var count = 0;
+	
+	JC.img = {'startWrap':['img/vicent-pop.png','img/vicent-lips.png','img/vicent-eyes.png','img/vicent-head.png'],
+			   'quizWrap':['img/quiz-bg.jpg','img/title-bg.png','img/icon.png'],
+			   'resultWrap':['img/result-bg.jpg','img/award-bg.png','img/share-bg.png']};
 	//get user's openid at the begining
 	getOpenId();
+	preLoadImg(JC.img.startWrap);
 	/*
 		at startWrap click on yes button
 		setup those animations' timeline
@@ -20,6 +25,8 @@ $(document).ready(function(){
 			$(".startWrap .ageWrap").fadeOut();
 			$(".startWrap .swipeWrap").fadeIn();
 			/*load background image for quizWrap*/
+			
+			preLoadImg(JC.img.quizWrap);
 			$(".quizWrap .bgWrap").addClass('loaded');
 			if($(".swipeWrap").is(":visible")){
 				setTimeout(function(){
@@ -204,7 +211,8 @@ $(document).ready(function(){
 		}
 		$(".startWrap").fadeOut();
 		/*load background image for resultWrap*/
-		$(".resultWrap").addClass('loaded');
+		// $(".resultWrap").addClass('loaded');
+		preLoadImg(JC.img.resultWrap);
 	}
 
 
@@ -221,6 +229,7 @@ $(document).ready(function(){
 			s += '<br>';
 		}
 		$('.resultWrap .result').addClass(type);
+		preLoadImg(['img/'+type+'.png']);
 		$('.resultWrap .result .content').find('h2').html(title);
 		$('.resultWrap .result .content').find('p').html(s);
 	}
@@ -452,5 +461,12 @@ $(document).ready(function(){
         		}
         	}
 		})
+	}
+
+	function preLoadImg(arr){
+		for(var i = 0;i<arr.length;i++){
+			var img = new Image();
+			img.src = arr[i];
+		}
 	}
 });
