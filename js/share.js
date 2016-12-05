@@ -1,5 +1,5 @@
 var currentUrl = window.location.href;
-
+var shareURL = 'http://jc.pernod-ricard-china.com/wc/get_signature.php?signurl=' + encodeURIComponent(currentUrl);  
 var shareData = {
     title: "用Rocher好好说谢谢",
     desc: "有一份感恩，在这里等你",
@@ -10,7 +10,7 @@ var shareData = {
 window.setTimeout(function(){
     $.ajax({
         type: 'GET',
-        url: 'api/index.php',
+        url: shareURL,
         dataType: 'json',
         cache: false,
         success: function(data){

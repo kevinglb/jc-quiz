@@ -13,6 +13,7 @@ $(document).ready(function(){
 	JC.img = {'startWrap':['img/vicent-pop.png','img/vicent-lips.png','img/vicent-eyes.png','img/vicent-head.png'],
 			   'quizWrap':['img/quiz-bg.jpg','img/title-bg.png','img/icon.png'],
 			   'resultWrap':['img/result-bg.jpg','img/award-bg.png','img/share-bg.png']};
+
 	//get user's openid at the begining
 	getOpenId();
 	preLoadImg(JC.img.startWrap);
@@ -427,9 +428,11 @@ $(document).ready(function(){
 	}
 
 	function getOpenId(){
+		var currentURL = window.location.href;
+		var ajaxURL = 'http://jc.pernod-ricard-china.com/wc/skip.php?type=base&reurl=' + encodeURIComponent(currentURL);
 		$.ajax({
 			type: 'GET',
-        	url: 'https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN',
+        	url: ajaxURL,
         	dataType: 'json',
         	cache: false,
         	success:function(data){
